@@ -1,0 +1,48 @@
+#canvas{
+	width: 1000px;
+	height: 200px;
+	padding: 100px 50px;
+	text-align: center;
+	border: 1px solid red;
+}
+span{
+	
+	background: greenyellow;
+	display: inline-block;
+	padding: 10px;
+	color: #fff;
+	margin: 10px 0;
+}
+.changeColor span{
+	background: red;
+}
+.changeLengt span:after{
+	content:"length";
+	margin-left: 10px;
+}
+#bag{
+	width: 200px;
+	height: 500px;
+	margin: 0 auto;
+	background:url(../image/ycg.png) center no-repeat ;
+	background-size: 80%;
+}
+#bag-health{
+	width: 200px;
+	border: 2px #000 solid;
+	margin: 0 auto 20px auto;
+}
+#bag-health div{
+	height: 20px;
+	background: crimson;
+}
+#controls{
+	width: 200px;
+	margin: 0 auto;
+}
+#controls button{
+	margin-left: 20px;
+}
+#bag.burst{
+	background: url(../image/alipay_wap.jpg)center no-repeat;
+}

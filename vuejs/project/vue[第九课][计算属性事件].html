@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="https://unpkg.com/vue"></script>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<h1>computed计算属性</h1>
+		<div id="vue1-app">
+			<button v-on:click="a++">Add to A</button> <!-- a++传入app2.js p标签在从app2.js调用a加后的值-->
+			<button v-on:click="b++">Add to B</button>
+			<p>A - {{a}}</p>
+			<p>B - {{b}}</p>
+			<!-- <p>Age + A = {{AddtoA()}}</p>
+			<p>Age + B = {{AddtoB()}}</p> -->
+			<p>Age + A = {{AddtoA}}</p>
+			<p>Age + B = {{AddtoB}}</p>
+		</div>
+		
+		
+		<script src="../js/app2.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 在这种过程中发现 初始化方法的时候Add to A 和Add to B 都会执行
+同样在点击Add to A和Add to B的时候这两个方法也会执行
+这样会十分浪费资源
+因此：采用vue中的computed计算属性实现单个加载，
+【computed计算属：应用场景：变化幅度比较大的情况】
+例如搜索很多的情况，可以采用此属性进行优化
+computed计算属性原理：
+实际上是将当前DOM计算方法拷贝到虚拟到DOM，当虚拟DOM与当前真是DOM有不同的时候
+才会处罚这个方法-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<div id="vue-app">
+			<h1>Events事件修饰符详细见vue文档</h1>
+			<button @click.once="add(1)">加一岁</button>
+			<button v-on:click="substract(1)">减一岁</button>
+			<button @dblclick="add(10)">加十岁</button>
+			<button v-on:dblclick="substract(10)">减十岁</button>
+			<p>my age is {{age}}</p>
+			<div id="canvas" v-on:mousemove="updateXY">
+			 {{x}} ,{{y}} - <span v-on:mousemove.stop="">stopMoving</-span>
+			</div>
+			<a v-on:click.prevent="alert" href="http://www.baidu.com">tiaozhuan</a>
+		</div>
+		
+		
+		<script src="../js/app.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 事件修饰符详细见vue文档
+once:只让事件执行一次
+stop：阻止点击事件
+prevent：阻止跳转事件
+ -->

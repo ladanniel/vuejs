@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="https://unpkg.com/vue"></script>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<h1>案例</h1>
+		<div id="vue1-app">
+			<!-- 图片 -->
+			<div id="bag" v-bind:class="{burst:ended}"></div>
+			<!-- 进度情况 -->
+			<div id="bag-health">
+				<div v-bind:style="{width:health + '%'}"></div>
+			</div>
+			<!-- 控制按钮 -->
+			<div id="controls">
+				<button v-on:click="punch" v-show="!ended">药采购</button>
+				<button v-on:click="restart">支付宝</button>
+			</div>
+		</div>
+		<script src="../js/app6.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 
+div也是可以遍历生成，但是，会多次渲染，造成资源浪费
+解决此问题的方法
+优化方法：template v-for
+-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="https://unpkg.com/vue"></script>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<h1>案例</h1>
+		<h1>初始化多个vue实例化对象 案例</h1>
+		<div id="vue1-app-one">
+			<h1>{{title}}</h1>
+			<p>{{greet}}</p>
+		</div>
+		<div id="vue1-app-two">
+			<h1>{{title}}</h1>
+			<p>{{greet}}</p>
+			<button v-on:click="changeTitle">changeOne Title</button>
+		</div>
+		<script src="../js/app7.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 
+div也是可以遍历生成，但是，会多次渲染，造成资源浪费
+解决此问题的方法
+优化方法：template v-for
+-->

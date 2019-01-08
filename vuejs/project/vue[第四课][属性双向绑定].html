@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<div id="vue-app">
+			<h1>{{greet("afternoon")}}</h1>
+			<p>姓名: {{name}}</p>
+			<p>工作: {{job}}</p>
+			<a v-bind:href="website">web开发链接地址</a>
+			<input type="text" v-bind:value="name">
+			<input type="text" v-bind:value="job">
+			<p v-html="webTag"></p>
+		</div>
+		
+		<script src="../js/app.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>

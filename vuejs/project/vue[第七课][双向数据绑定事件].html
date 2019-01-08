@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<div id="vue1-app">
+			<h1>双向数据绑定/input/select/textarea</h1>
+			<label for="">姓名</label>
+			<input ref="name" type="text" v-on:keyup = "logName">
+			<span >{{name}}</span>
+			<label for="">年龄</label>
+			<input ref="age" type="text" v-on:keyup ="logAge">
+			<span >{{age}}</span>
+		</div>
+		
+		
+		<script src="../js/app1.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 在input 中ref:给事件做标记
+ -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="https://unpkg.com/vue"></script>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<h1>动态绑定CSS：详见vue框架CLASS与Style绑定</h1>
+		<div id="vue1-app">
+			<!-- <h2 v-bind:class="red:true,blue:false">示例1</h2> -->
+			<h3>动态 CSS CLASS 示例1</h3>
+		<div v-on:click="changeColor = !changeColor" v-bind:class="{changeColor:changeColor}">
+			<span>henry</span>
+		</div>
+		<h3>动态 CSS CLASS 示例2</h3>
+		<button v-on:click="changeColor = !changeColor" >change color</button>
+		<button v-on:click="changeLength = !changeLength" >change length</button>
+		<div v-bind:class="compClasses">
+			<span>henry</span>
+		</div>
+		</div>
+		<script src="../js/app3.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 
+v-bind:动态绑定class-->

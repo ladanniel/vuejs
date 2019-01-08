@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue.js</title>
+		<link rel="stylesheet"  href="style.css"/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<script src="https://unpkg.com/vue"></script>
+<!-- cdn版本号 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app就是根容器  -->
+		<h1>条件渲染v-if 详见起步 条件渲染</h1>
+		<div id="vue1-app">
+			<h1>v-if 条件</h1>
+			<button v-on:click="error = !error">Toggle Error</button>
+			<button v-on:click="success = !success">Toggle Success</button>
+			<!-- <p v-if="error">网络连接失败：404</p>
+			<p v-else-if="success">网络连接成功：200</p> -->
+			<h1>v-show</h1>
+			<p v-show="error">网络连接失败：404</p>
+			<p v-show="success">网络连接成功：200</p>
+		</div>
+		<script src="../js/app4.js"></script>
+<!-- 注意采用cdn方式，必须要在对应的app.js中实例化vue对象 -->
+	</body>
+</html>
+<!-- 
+v-bind:动态绑定class-->
